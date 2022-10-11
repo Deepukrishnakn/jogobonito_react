@@ -12,6 +12,8 @@ export const AuthProvider = ({children})=>{
     const [phone_number, setPhone_number] = useState('')
     let [authTokens, setAuthTokens] = useState(()=>localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
     let [user, setUser] = useState(()=>localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null)
+    let [adminauthTokens, setAdminauthTokens] = useState(()=>localStorage.getItem('adminauthTokens') ? JSON.parse(localStorage.getItem('adminauthTokens')) : null)
+    let [admin, setAdmin] = useState(()=>localStorage.getItem('adminauthTokens') ? jwt_decode(localStorage.getItem('adminauthTokens')) : null)
     let [VendorAuthTokens, setVendorAuthTokens] = useState(()=>localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
     let [vendor, setVendor] = useState(()=>localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null)
   
@@ -22,18 +24,25 @@ const userLogin= async (email,password)=>{
     // console.log(email)
     // console.log(password)
     await axios.post('account/login/', {email:email,password:password}).then((response)=>{
-       
-        console.log(response.data,'user')
+        console.log(response.data.admin,'user')
         setAuthTokens(response.data.token)
         setErr(response.data.message) 
         console.log(response.data.message,'user')
+        
         if(response.data.token){
-            localStorage.setItem('authTokens',JSON.stringify(response.data.token))
-            localStorage.setItem('user',JSON.stringify(jwt_decode(response.data.token)))
-            console.log(user)
-            localStorage.getItem(('authToken').email);
-            response.data.admin? navigate('/mhome'):
-            navigate( '/' )
+          
+            if(response.data.admin){
+                localStorage.setItem('adminauthTokens',JSON.stringify(response.data.token))
+                localStorage.setItem('admin',JSON.stringify(jwt_decode(response.data.token)))
+                navigate('/mhome')
+            }else{
+                localStorage.setItem('authTokens',JSON.stringify(response.data.token))
+                localStorage.setItem('user',JSON.stringify(jwt_decode(response.data.token)))
+                console.log(user)
+                localStorage.getItem(('authToken').email);
+                navigate('/')
+            }
+           
             
             
         }
@@ -46,21 +55,30 @@ const userLogin= async (email,password)=>{
 console.log(authTokens)
 
   }
-const Logoutuser = async()=>{
-    await axios.post('account/logout/',).then((response)=>{
-        console.log(response.data)
-      }) 
-    setAuthTokens(null)           
-    setUser(null)
-    localStorage.removeItem('authTokens')
-    localStorage.removeItem('user')
-    navigate('/VendorLogin')
-}
+// const Logoutuser = async()=>{
+//     await axios.post('account/logout/',).then((response)=>{
+//         console.log(response.data)
+//       }) 
+//     setAuthTokens(null)           
+//     setUser(null)
+//     localStorage.removeItem('authTokens')
+//     localStorage.removeItem('user')
+//     localStorage.removeItem('adminauthTokens')
+//     localStorage.removeItem('admin')
+//     navigate('/VendorLogin')
+// }
 let userLogout = () => {
     setAuthTokens(null);
     setUser(null)
     localStorage.removeItem('authTokens')
     localStorage.removeItem('user')
+    navigate( '/Login' )   
+}
+let adminLogout = () => {
+    setAdminauthTokens(null)
+    setAdmin(null)
+    localStorage.removeItem('adminauthTokens')
+    localStorage.removeItem('admin')
     navigate( '/Login' )   
 }
   
@@ -122,7 +140,8 @@ let vendorlogout = () => {
         setMessage:setMessage,
         error:error,
         vendor:vendor,
-        Logoutuser:Logoutuser,
+        adminauthTokens:adminauthTokens,
+        adminLogout:adminLogout,
         vendorLogin:vendorLogin,
         authTokens:authTokens,
         VendorAuthTokens:VendorAuthTokens,
