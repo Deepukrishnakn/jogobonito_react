@@ -37,8 +37,8 @@ import VendorOrderDetails from "./components/Mastar/VendorOrderDetails";
 import MastarHome from "./components/Mastar/MastarHome";
 import SlotbookingChart from "./components/Mastar/SlotbookingChart";
 import VendorprivetRouts from "./Utils/VendorprivetRouts";
-// import OnlyAdminPrivetRoutes from "./Utils/OnlyAdminPrivetRoutes";
-// import PrivetRouts from "./Utils/PrivetRouts";
+import OnlyAdminPrivetRoutes from "./Utils/OnlyAdminPrivetRoutes";
+import PrivetRouts from "./Utils/PrivetRouts";
 
 function App(){
   return (
@@ -66,36 +66,36 @@ function App(){
       <Route path='/Search/:key' element ={<Searchturf/>} />
 
 {/* user */}
-{/* <Route element= {<PrivetRouts/>}/> */}
-      <Route path='/getslot/:Turf_id' element ={<SlotPage/>} />
-      <Route path="/userprofile" element = {<UserProfilePage/>} />
-{/* <Route/> */}
+      <Route element={<PrivetRouts/>}>
+            <Route path='/getslot/:Turf_id' element ={<SlotPage/>} />
+            <Route path="/userprofile" element = {<UserProfilePage/>} />
+       </Route>
 
-{/* vendpr */}
-<Route element ={<VendorprivetRouts/>}> 
-      <Route path='/getallslot/:Turf_id' element ={<GetAllSlots/>} />
-      <Route path='/addturf' element ={<AddTurf/>} />
-      <Route path='/vhome' element ={<VhomePage/>} />
-      <Route path='/addslot' element ={<AddSlot/>} />
-      <Route path='/turftable' element ={<VturfTable/>} />
-      <Route path='/updateturf/:id' element ={<UpdateTurf/>} />
-      <Route path='/updateslot/:id' element ={<UpdateSlot/>}/>
-      <Route path="/vendorprofile" element ={<VendorProfile/>}/>
-      <Route path="/allcategory/" element ={<UpdateCategory/>}/>
-      <Route path='/payment' element ={<Payment/>} />
-      <Route path='/bookedslot' element ={<BookedSlots/>} />
-</Route>
+      {/* vendpr */}
+      <Route element ={<VendorprivetRouts/>}> 
+            <Route path='/getallslot/:Turf_id' element ={<GetAllSlots/>} />
+            <Route path='/addturf' element ={<AddTurf/>} />
+            <Route path='/vhome' element ={<VhomePage/>} />
+            <Route path='/addslot' element ={<AddSlot/>} />
+            <Route path='/turftable' element ={<VturfTable/>} />
+            <Route path='/updateturf/:id' element ={<UpdateTurf/>} />
+            <Route path='/updateslot/:id' element ={<UpdateSlot/>}/>
+            <Route path="/vendorprofile" element ={<VendorProfile/>}/>
+            <Route path="/allcategory/" element ={<UpdateCategory/>}/>
+            <Route path='/payment' element ={<Payment/>} />
+            <Route path='/bookedslot' element ={<BookedSlots/>} />
+      </Route>
 
-{/* Mastar */}
-{/* <Route element ={<OnlyAdminPrivetRoutes/>}> */}
-      <Route path="/paidvendor" element={<VendorManage/>}/>
-      <Route path="/allvendormanage" element={<AllVendors/>}/>
-      <Route path="/allusers" element={<AllUsers/>}/>
-      <Route path="/userorders" element={<SlotbookedDetails/>}/>
-      <Route path='/vendororder' element ={<VendorOrderDetails/>} />
-      <Route path='/mhome' element ={<MastarHome/>} />
-      <Route path="/slotbookingchart" element={<SlotbookingChart/>}/>
-{/* </Route> */}
+      {/* Mastar */}
+      <Route element ={<OnlyAdminPrivetRoutes/>}>
+            <Route path="/paidvendor" element={<VendorManage/>}/>
+            <Route path="/allvendormanage" element={<AllVendors/>}/>
+            <Route path="/allusers" element={<AllUsers/>}/>
+            <Route path="/userorders" element={<SlotbookedDetails/>}/>
+            <Route path='/vendororder' element ={<VendorOrderDetails/>} />
+            <Route path='/mhome' element ={<MastarHome/>} />
+            <Route path="/slotbookingchart" element={<SlotbookingChart/>}/>
+      </Route>
     </Routes>
     </AuthProvider>
   </BrowserRouter>
