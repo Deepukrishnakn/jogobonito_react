@@ -25,7 +25,7 @@ function UpdateCategory() {
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
 
-  const {VendorAuthTokens} =useContext(authContext)
+  const {adminauthTokens} =useContext(authContext)
   const Navigate = useNavigate()
   const [cate_name, setCatename] = useState("");
   const [slug, setSlug] = useState("");
@@ -38,7 +38,7 @@ function UpdateCategory() {
 
   const loadecate = async() => {
     const {data} = await axios.get(`vendor/category/${data.id}/`,
-    {headers:{Authorization:`Bearer ${VendorAuthTokens}`,  'content-type': 'multipart/form-data'} });
+    {headers:{Authorization:`Bearer ${adminauthTokens}`,  'content-type': 'multipart/form-data'} });
     setCatename(data.category_name)
     setSlug(data.slug)
     setDescription(data.description)
@@ -55,7 +55,7 @@ function UpdateCategory() {
     cateData.append('cat_image',image,)
 
 await axios.patch(`vendor/category/${data.id}/`,cateData,    
-{headers:{Authorization:`Bearer ${VendorAuthTokens}`, 'content-type': 'multipart/form-data'} } ).then((response)=>{
+{headers:{Authorization:`Bearer ${adminauthTokens}`, 'content-type': 'multipart/form-data'} } ).then((response)=>{
   console.log(response.data)
   if (response.status===200){
     handleClose()
@@ -69,7 +69,7 @@ await axios.patch(`vendor/category/${data.id}/`,cateData,
 }
 
 const deleteCate = async (id,e) => {
-    await axios.delete(`vendor/category/${id}/`,{headers:{Authorization:`Bearer ${VendorAuthTokens}`} })
+    await axios.delete(`vendor/category/${id}/`,{headers:{Authorization:`Bearer ${adminauthTokens}`} })
     .then((response)=>{
         loadecate()
         handleClose1()

@@ -23,7 +23,7 @@ function AllVendors() {
     // const [is_Paid, setIsPaid] = useState("");
     const [is_active, setIsAcctivate] = useState();
 
-    const {authTokens} =useContext(authContext)
+    const {adminauthTokens} =useContext(authContext)
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
@@ -45,7 +45,7 @@ function AllVendors() {
     const getVendor = () =>{
         setLoading(true);
         axios.get('mastar/allvendor',
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
             // setIsAcctivate(res.data.is_active)
             // setIsVendor(res.data.is_Vendor)
             // setIsPaid(res.data.is_Paid)
@@ -59,7 +59,7 @@ function AllVendors() {
       const GetSingleVendor = (id,e) =>{
         setLoading(true);
         axios.get(`mastar/allvendor/${id}`,
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           console.log('turf',res.data)
           setSingleVendor(res.data)
           console.log(res.data)
@@ -71,7 +71,7 @@ function AllVendors() {
 
       const DeleteVendor = (id,e) =>{
         axios.delete(`mastar/allvendor/${id}`,
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           handleClose1()
           getVendor()
         }).catch(e=>console.log(e))
@@ -82,14 +82,14 @@ function AllVendors() {
         if (active){
           await axios.patch(`mastar/allvendor/${id}/`,{
             is_active:'False'
-          },{headers:{Authorization:`Bearer ${authTokens}`}}).then((res)=>{
+          },{headers:{Authorization:`Bearer ${adminauthTokens}`}}).then((res)=>{
            console.log(res.data)
            getVendor()
           })
         }else{
           await axios.patch(`mastar/allvendor/${id}/`,{
             is_active:'True'
-          },{headers:{Authorization:`Bearer ${authTokens}`}}).then((res)=>{
+          },{headers:{Authorization:`Bearer ${adminauthTokens}`}}).then((res)=>{
            console.log(res.data)
            getVendor()
           })

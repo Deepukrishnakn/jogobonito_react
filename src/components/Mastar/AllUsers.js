@@ -2,9 +2,8 @@ import React, { useEffect, useState, useContext} from 'react';
 import Table from 'react-bootstrap/Table';
 import { Row,Col } from 'react-bootstrap';
 import axios from "../../constants/constants"
-import authContext from '../../context/authContext'
-import { useNavigate,Link } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
+import AuthContext from '../../context/authContext';
+
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -20,7 +19,7 @@ function AllUsers() {
 
     const [is_active, setIsAcctivate] = useState();
 
-    const {authTokens} =useContext(authContext)
+    const {adminauthTokens} =useContext(AuthContext)
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
@@ -42,7 +41,7 @@ function AllUsers() {
     const getUser = () =>{
         setLoading(true);
         axios.get('mastar/alluser',
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
             setUser(res.data)
           console.log(res.data)
         }).catch(e=>console.log(e))
@@ -53,7 +52,7 @@ function AllUsers() {
       const GetSingleUser = (id,e) =>{
         setLoading(true);
         axios.get(`mastar/alluser/${id}`,
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           console.log('turf',res.data)
           setSingleUser(res.data)
           console.log(res.data)
@@ -65,7 +64,7 @@ function AllUsers() {
 
       const DeleteVendor = (id,e) =>{
         axios.delete(`mastar/alluser/${id}`,
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           handleClose1()
           getUser()
         }).catch(e=>console.log(e))
@@ -77,14 +76,14 @@ function AllUsers() {
         if (active){
           await axios.patch(`mastar/alluser/${id}/`,{
             is_active:'False'
-          },{headers:{Authorization:`Bearer ${authTokens}`}}).then((res)=>{
+          },{headers:{Authorization:`Bearer ${adminauthTokens}`}}).then((res)=>{
            console.log(res.data)
            getUser()
           })
         }else{
           await axios.patch(`mastar/alluser/${id}/`,{
             is_active:'True'
-          },{headers:{Authorization:`Bearer ${authTokens}`}}).then((res)=>{
+          },{headers:{Authorization:`Bearer ${adminauthTokens}`}}).then((res)=>{
            console.log(res.data)
            getUser()
           })

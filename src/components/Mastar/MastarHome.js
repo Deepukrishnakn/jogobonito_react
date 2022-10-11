@@ -7,12 +7,12 @@ import SlotbookingChart from './SlotbookingChart';
 import authContext from '../../context/authContext'
 
 function MastarHome() {
-  const {authTokens} =useContext(authContext)
+  const {adminauthTokens} =useContext(authContext)
   const [loading,setLoading] = useState(false);
     const [cartdata,setachartData] = useState([])
     const getchartdata = () =>{
         setLoading(true);
-        axios.get('mastar/Orderchart/',{headers:{Authorization:`Bearer ${authTokens}`} }
+        axios.get('mastar/Orderchart/',{headers:{Authorization:`Bearer ${adminauthTokens}`} }
         ).then(res=>{
           setachartData(res.data)
           console.log(res.data)

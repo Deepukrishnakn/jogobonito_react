@@ -13,8 +13,8 @@ import AuthContext from '../../context/authContext';
  
 function Mnavebars() {
 
-    let {userLogout} = useContext(AuthProvider)
-  let {authTokens} = useContext(AuthContext)
+    let {adminLogout} = useContext(AuthProvider)
+  let {adminauthTokens} = useContext(AuthContext)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -33,7 +33,7 @@ function Mnavebars() {
             <Nav.Link href="#allvendormanage"  onClick={()=>navigate('/allvendormanage')}>Vendors</Nav.Link>
             <Nav.Link href="#allusers" onClick={()=>navigate('/allusers')}>Users</Nav.Link>
             <NavDropdown title="MY Account" id="collasible-nav-dropdown">
-            {authTokens ?   <NavDropdown.Item href="" lassName='me-5 vnave' onClick={userLogout}>
+            {adminauthTokens ?   <NavDropdown.Item href="" lassName='me-5 vnave' onClick={adminLogout}>
                 Log out
               </NavDropdown.Item>:<NavDropdown.Item href="" className='vnave'> <Link to='/Login'>Login</Link></NavDropdown.Item>
              }

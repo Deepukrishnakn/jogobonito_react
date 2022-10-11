@@ -11,7 +11,7 @@ import Mnavebars from './Mnavebars';
 
 function SlotbookedDetails() {
 
-    const {authTokens} =useContext(authContext)
+    const {adminauthTokens} =useContext(authContext)
     const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -25,7 +25,7 @@ function SlotbookedDetails() {
     const getBookedSlot = () =>{
         setLoading(true);
         axios.get('mastar/userorders',
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           console.log('turf',res.data)
           setOrder(res.data)
           console.log(res.data)
@@ -37,7 +37,7 @@ function SlotbookedDetails() {
       const GetSingleOrder = (id,e) =>{
         setLoading(true);
         axios.get(`mastar/userorders/${id}`,
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           console.log('turf',res.data)
           setSingleOrder(res.data)
           console.log(res.data)

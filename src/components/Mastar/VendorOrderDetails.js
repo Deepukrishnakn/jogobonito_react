@@ -11,7 +11,7 @@ import Mnavebars from './Mnavebars';
 
 function VendorOrderDetails() {
 
-    const {authTokens} =useContext(authContext)
+    const {adminauthTokens} =useContext(authContext)
     const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -28,7 +28,7 @@ const handleClose1 = () => setShow1(false);
     const getOrder = () =>{
         setLoading(true);
         axios.get('mastar/vendororders',
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           console.log('turf',res.data)
           setOrder(res.data)
           console.log(res.data)
@@ -40,7 +40,7 @@ const handleClose1 = () => setShow1(false);
       const GetSingleOrder = (id,e) =>{
         setLoading(true);
         axios.get(`mastar/vendororders/${id}`,
-        {headers:{Authorization:`Bearer ${authTokens}`}}).then(res=>{
+        {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           console.log('turf',res.data)
           setSingleOrder(res.data)
           console.log(res.data)
