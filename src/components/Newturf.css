@@ -1,0 +1,49 @@
+.Newturf{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.newturfItem{
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.newturfImg{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.newturfTitle>h1{
+    font-family: "Inter";
+    padding: 1rem;
+    font-size: 25px; 
+    background-color: rgb(223, 238, 16);
+    border-radius: 5px; 
+    font-weight: bold;
+}
+
+.newturfTitle>h2{
+    padding: 1rem;
+    font-family: "Inter";
+    color: azure;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);  
+    font-weight: bold;
+}    
+
+.buttons{
+    padding: 1rem;
+    background-color: #6247a1;
+    color: rgb(196, 197, 151);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+   
+}    

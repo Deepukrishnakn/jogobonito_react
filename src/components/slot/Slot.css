@@ -1,0 +1,11 @@
+.slotcard{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1;
+}
+.booked{
+ background-color:rgb(255, 0, 0)e;
+}

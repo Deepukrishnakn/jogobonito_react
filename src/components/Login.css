@@ -1,0 +1,82 @@
+
+
+.login_h1 { 
+    font-size: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    letter-spacing: -1px;
+    color: rgb(118, 26, 141);
+    text-align: center;
+    outline: none;
+    font-family: "Inter";
+    font-size: 55px;
+  
+
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.logout1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-family: "Inter";
+}
+
+.loginbody{
+    
+    border-radius: 2rem;
+    min-width: 380px;
+    padding: 20px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid rgba(0,80,40,0,54);
+    font-family: "Inter";
+    border-radius: 2rem;
+    font-size: 18px;
+}
+
+.loginbg{
+    background-color: rgb(151, 214, 206);
+}
+
+.signupbg{
+    background-color: rgb(108, 161, 182);
+}
+
+.otpbg{
+    background-color: rgb(139, 168, 195);
+}
+
+.VendorLogin{
+    background-color: rgb(100, 226, 178);
+}
+
+.nave{
+    color: white;
+    font-family: "Inter";
+}
+
+.logo{
+    width: 100px;
+    height: 50px;
+    margin-right: 2rem;
+    margin-left: 3rem;
+    justify-items: left;
+}
+
+.logoutfont{
+    font-family: "Inter";
+}
+
+.message{
+    background-color: green;
+    width: 50px;
+    height: 50px;
+}

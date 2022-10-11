@@ -1,0 +1,46 @@
+.category{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1;
+}
+
+.categoryItem{
+    position: relative;
+    color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 200px;
+    object-fit: contain;
+}
+.categoryImg{
+    width: 100%;
+    object-fit: cover;
+}
+
+.categoryTitle{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    
+} 
+
+.title{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(49, 90, 8);
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    font-size: 40px;
+}
+.buttons{
+    padding: 1rem;
+    background-color: #49259e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
