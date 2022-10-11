@@ -51,7 +51,7 @@ useEffect(() => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={'http://127.0.0.1:8000'+turfdetails.image}
+                src={turfdetails.image}
                 alt={turfdetails.image}
               />
               <Carousel.Caption>
@@ -62,7 +62,7 @@ useEffect(() => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={'http://127.0.0.1:8000'+turfdetails.image1}
+                src={turfdetails.image1}
                 alt="Second slide"
               />
       
@@ -74,7 +74,7 @@ useEffect(() => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={'http://127.0.0.1:8000'+turfdetails.image2}
+                src={turfdetails.image2}
                 alt="Third slide"
               />
       
@@ -86,7 +86,7 @@ useEffect(() => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={'http://127.0.0.1:8000'+turfdetails.image3}
+                src={turfdetails.image3}
                 alt="Third slide"
               />
       

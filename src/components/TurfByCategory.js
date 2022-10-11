@@ -177,7 +177,7 @@ Sorry Turf is Not available !!!
 
 {turfbycategory.map((obj)=>
 <div className='list mt-5 me-5 '>
-  <img src={'http://127.0.0.1:8000'+obj.image} alt='uyguy' className='listImg'/>
+  <img src={obj.image} alt='uyguy' className='listImg'/>
       <div className='listDesc'>
       <h1 className='listTile'>Turf Name: {obj.turf_name}</h1>
         <span className='listSize'>Turf Size: {obj.size}</span>

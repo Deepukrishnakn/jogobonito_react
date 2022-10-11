@@ -83,7 +83,7 @@ Sorry Slot is Not available !!!
         {currentPost.map((obj)=>
       <Col lg={3}>
 <Card  className='m-5'>
-      <Card.Img variant="top" src={'http://127.0.0.1:8000'+obj.turf.image} />
+      <Card.Img variant="top" src={obj.turf.image} />
       <Card.Body>
 
         <Card.Title>{obj.turf.turf_name}</Card.Title>

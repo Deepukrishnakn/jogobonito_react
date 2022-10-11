@@ -21,7 +21,6 @@ import axios from "../constants/constants"
 
 function Turf() {
 
-  let url='http://127.0.0.1:8000'
   const [loading,setLoading] = useState(false);
   const navigate = useNavigate()
            
@@ -183,7 +182,7 @@ Sorry Turf is Not available !!!
  
 {currentPost.map((obj)=>
 <div className='list mt-5 me-5 container'>
-      <img src={'http://127.0.0.1:8000'+obj.image} alt='' className='listImg'/>
+      <img src={obj.image} alt='' className='listImg'/>
       <div className='listDesc'>
       <h1 className='listTile'>Turf Name: {obj.turf_name}</h1>
         <span className='listSize'>Turf Size:key={obj.id} {obj.size}</span>

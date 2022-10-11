@@ -53,7 +53,7 @@ Now you can Post Your Own Turf !!!
         {currentPost.map((obj)=>
       <Col lg={3}>
 <Card  className='m-5'>
-      <Card.Img variant="top" src={'http://127.0.0.1:8000'+obj.image} />
+      <Card.Img variant="top" src={obj.image} />
       <Card.Body>
         <Card.Title>{obj.turf_name}</Card.Title>
         <Card.Text>
