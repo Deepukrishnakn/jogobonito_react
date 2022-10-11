@@ -1,13 +1,12 @@
-// import React,{useContext} from 'react'
-// import {Outlet,Navigate} from 'react-router-dom'
-// import AuthContext from '../context/authContext'
+import React,{useContext} from 'react'
+import {Outlet,Navigate} from 'react-router-dom'
 
-// function OnlyAdminPrivetRoutes() {
-//     let {adminauthTokens} = useContext(AuthContext)
-//   const val=  localStorage.getItem('adminauthTokens') 
-//     console.log(adminauthTokens)
 
-//     return val ? <Outlet/>: <Navigate to='/Login'></Navigate>
-// }
+function OnlyAdminPrivetRoutes() {
 
-// export default OnlyAdminPrivetRoutes
+  const val=  localStorage.getItem('adminauthTokens') 
+
+    return val ? <Outlet/>: <Navigate to='/login'></Navigate>
+}
+
+export default OnlyAdminPrivetRoutes

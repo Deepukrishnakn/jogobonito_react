@@ -1,17 +1,12 @@
-// import React,{useContext} from 'react'
-// import {Outlet,Navigate} from 'react-router-dom'
-// import AuthContext from '../context/authContext'
+import React,{useContext} from 'react'
+import {Outlet,Navigate} from 'react-router-dom'
 
 
-// function PrivetRouts() {
+function PrivetRouts() {
 
-//     let {authTokens} = useContext(AuthContext)
-//     const val=  localStorage.getItem('authTokens') 
-//       console.log(authTokens)
-  
-   
-//     return userauthTokens ? <Outlet/>: <Navigate to='/Login'></Navigate>
-  
-// }
+    const val=  localStorage.getItem('authTokens')
 
-// export default PrivetRouts
+    return val ? <Outlet/>: <Navigate to='/login'></Navigate>
+}
+
+export default PrivetRouts
