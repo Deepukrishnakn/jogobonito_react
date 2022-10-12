@@ -7,9 +7,9 @@ import '../components/home.css'
 import Newturf from '../components/Newturf'
 import { Col,Row } from 'react-bootstrap';
 import Footer from '../components/Footer'
-// import jogobaneer1 from "../img/banner4.jpg";
-// import jogobaneer2 from "../img/5001.webp";
-// import { useNavigate,Link } from 'react-router-dom';
+import jogobaneer1 from "../img/banner4.jpg";
+import jogobaneer2 from "../img/5001.webp";
+import { useNavigate,Link } from 'react-router-dom';
 
 function ThomePage() {
   return (
@@ -39,7 +39,7 @@ function ThomePage() {
  
 </div>
 
-{/* <div className='container'>
+<div className='container'>
 <div class="row mt-5">
 <h1 className='title mb-5'>FiFA World Cup 2022</h1>
 </div>
@@ -50,10 +50,10 @@ Yellow shirts, blue shorts and white socks – you know what you are getting wit
 <button className='buttons1 m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button>
 </div>
 </div>
-</div> */}
+</div>
 
 
-{/* <div className='container'>
+<div className='container'>
 <div class="row mt-5">
 <h1 className='title mb-5'>FIFA World Cup 2022 Qatar</h1>
 </div>
@@ -62,7 +62,7 @@ Yellow shirts, blue shorts and white socks – you know what you are getting wit
   <button className='buttons1 m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button></div>
 <div class="col-sm-6 mt-5 mb-5"><img alt='' className='banner' src={jogobaneer1} /></div>
 </div>
-</div> */}
+</div>
 
 <div className='FooterContainer'>
   <Footer/>
