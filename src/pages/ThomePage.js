@@ -44,7 +44,7 @@ function ThomePage() {
 <h1 className='title mb-5'>FiFA World Cup 2022</h1>
 </div>
 <div class="row">
-  {/* <div class="col-sm-6 mt-5 mb-5"><img alt='' className='banner' src={jogobaneer2} /></div> */}
+  <div class="col-sm-6 mt-5 mb-5"><img alt='' className='banner' src={jogobaneer2} /></div>
   <div class="col-sm-6"><h1 className='motto mt-5'>Brazil – Home kit
 Yellow shirts, blue shorts and white socks – you know what you are getting with Brazil. Twists can be put on an old classic, though, and the Selecao have worked a subtle debossed jaguar pattern into their latest design. There is also beautiful button detailing on the collar that resembles the nation’s flag.</h1>
 <button className='buttons1 m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button>
