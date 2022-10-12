@@ -22,6 +22,7 @@ useEffect(()=>{
 },[]);
   return (  
     <div>
+      
 <Row>
       {loading && <h4>loading...</h4>}
   <h1 className='title'>Categories</h1>
