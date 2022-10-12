@@ -25,3 +25,37 @@
 }
 
 
+.banner{
+    width: 100%;
+    max-width: 1024px;
+}
+
+.motto{
+    /* display: flex; */
+    /* font-family: 'Courier New', monospace; */
+    /* font-size: xx-large; */
+    /* font-weight: bolder; */
+    color: rgb(85, 0, 100);
+    margin-top: 5rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+}
+.motto1{
+    /* display: flex; */
+    /* font-family: 'Courier New', monospace; */
+    /* font-size: xx-large; */
+    /* font-weight: bolder; */
+    color: rgb(85, 0, 100);
+    margin-top: 5rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+.buttons1{
+    padding: 1rem;
+    background-color: #efcd0c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

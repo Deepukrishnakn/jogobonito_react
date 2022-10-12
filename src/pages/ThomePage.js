@@ -47,7 +47,7 @@ function ThomePage() {
   <div class="col-sm-6 mt-5 mb-5"><img alt='' className='banner' src={jogobaneer2} /></div>
   <div class="col-sm-6"><h1 className='motto mt-5'>Brazil – Home kit
 Yellow shirts, blue shorts and white socks – you know what you are getting with Brazil. Twists can be put on an old classic, though, and the Selecao have worked a subtle debossed jaguar pattern into their latest design. There is also beautiful button detailing on the collar that resembles the nation’s flag.</h1>
-<button className='buttons m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button>
+<button className='buttons1 m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button>
 </div>
 </div>
 </div>
@@ -59,7 +59,7 @@ Yellow shirts, blue shorts and white socks – you know what you are getting wit
 </div>
 <div class="row">
   <div class="col-sm-6"><h1 className=' mt-5 motto1'>Football corruption and the remarkable road to Qatar’s World Cup</h1>
-  <button className='buttons m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button></div>
+  <button className='buttons1 m-4' style={{color:'white'}}><Link to='/turf'>Play Soccer</Link></button></div>
 <div class="col-sm-6 mt-5 mb-5"><img alt='' className='banner' src={jogobaneer1} /></div>
 </div>
 </div>
