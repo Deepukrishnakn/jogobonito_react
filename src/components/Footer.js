@@ -12,7 +12,7 @@ function Footer() {
                 <li className='fListItem'><Link className='fListItem' to='/Bisuness'>Sign Up</Link></li>
             </ul>
         </div>
-        <div className='mb-5'>Copyright © 2022 JoGoboNiTo</div>
+        <div className='mb-5'>Copyright © 2022 JoGoboNiTo/Developed by Deepukrishna</div>
     </div>
   )
 }
