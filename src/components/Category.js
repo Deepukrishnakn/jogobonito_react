@@ -6,6 +6,7 @@ import { Col,Row } from 'react-bootstrap';
 import axios from "../constants/constants"
 import { useNavigate,Link } from 'react-router-dom';
 
+
 function Category() {
 
   const navigate = useNavigate()

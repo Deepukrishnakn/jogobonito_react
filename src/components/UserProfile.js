@@ -108,6 +108,7 @@ const handleShow2 = () => setShow2(true);
   <Navebar/>
   <Header/>
 <Row>
+<h1 className='title m-5'>Profile of {user.username}</h1>
   <Col lg={12}>
     
 
@@ -146,7 +147,7 @@ const handleShow2 = () => setShow2(true);
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword" onChange={(e)=>setEmail(e.target.value)} value={email}>
-        <Form.Label>Enter Phome number</Form.Label>
+        <Form.Label>Enter Phone number</Form.Label>
         <Form.Control type="text" placeholder="Enter Phome number" />
       </Form.Group> 
       <Button variant="primary" type="submit">
@@ -167,7 +168,7 @@ const handleShow2 = () => setShow2(true);
         </Nav.Item>
         <Nav.Item>
                  <Button variant="danger" onClick={handleShow2} className='me-5'>
-                 Change<br/>Passwors
+                 Change<br/>password
       </Button>
 
       <Modal show={show2} onHide={handleClose2}>

@@ -17,7 +17,15 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-
+import {
+  MDBCard,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRow,
+  MDBCol
+} from 'mdb-react-ui-kit';
 
 function TurfByCategory() {
 
@@ -176,20 +184,28 @@ Sorry Turf is Not available !!!
   <Col lg={8}>
 
 {turfbycategory.map((obj)=>
-<div className='list mt-5 me-5 '>
-  <img src={obj.image} alt='uyguy' className='listImg'/>
-      <div className='listDesc'>
-      <h1 className='listTile'>Turf Name: {obj.turf_name}</h1>
-        <span className='listSize'>Turf Size: {obj.size}</span>
-        <span className='listDesc'>Turf District: {obj.category.category_name}</span>
-        <span className='listcity'>Turf City: {obj.city.city}</span>
-        <span className='listcity'>Turf District: {obj.district.district}</span>
+ <MDBCard className='m-5' style={{ maxWidth: '1000px' }}>
+ <MDBRow className='g-0'>
+   <MDBCol md='4'>
+     <MDBCardImage className='' src={obj.image} alt='...' fluid />
+   </MDBCol>
+   <MDBCol md='8'>
+     <MDBCardBody>
+       <MDBCardTitle style={{color:'blue', textAlign:'center'}}>{obj.turf_name}</MDBCardTitle>
+       <MDBCardText style={{color:'black', textAlign:''}}>
+       <span className='listSize'>Turf Size: {obj.size}</span>
+        <span className='listDesc'>Turf Desc: {obj.category.category_name}</span>
+        <span className='listcity'>Turf district: {obj.district.district}</span><br/>
+        <span className='listcity'>Turf City: {obj.city.city}</span><br/>
         <span className='listPrice'>Price: {obj.price}</span>
-      </div>
-      <div className='BookingBtn'>
-      <button className='bookbtn' onClick={()=>navigate(`/singleturf/${obj.category.slug}/${obj.slug}/`)}>See Availability</button>
-    </div>
-    </div>
+       </MDBCardText>
+       <MDBCardText>
+         <small className='text-muted'> <button className='bookbtn' onClick={()=>navigate(`/singleturf/${obj.category.slug}/${obj.slug}/`)}>See Availability</button></small>
+       </MDBCardText>
+     </MDBCardBody>
+   </MDBCol>
+ </MDBRow>
+</MDBCard>
 )}
     
     </Col>

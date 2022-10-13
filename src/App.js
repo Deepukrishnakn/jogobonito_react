@@ -52,7 +52,7 @@ function App(){
       <Route path='/Nave' element ={<HomePage/>} />
       <Route path='/Verify' element ={<VerifyPage/>} />
       <Route path='/ForgotPassword' element ={<ForgotpassPage/>} />
-      <Route path='/Bisuness' element ={<BisunessPage/>} />
+      <Route path='/Business' element ={<BisunessPage/>} />
       <Route path='/VendorLogin' element ={<VendorLoginPage/>} />
 
 

@@ -37,7 +37,7 @@ function Header() {
 
                <div className='headerlistItem'>
                <FontAwesomeIcon icon={faFutbol} />
-               <Link to='/Bisuness'><span className='turfbtn'>Business</span></Link>
+               <Link to='/Business'><span className='turfbtn'>Business</span></Link>
                </div>
           
                <div className='headerlistItem active'>
