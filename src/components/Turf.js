@@ -202,7 +202,7 @@ Sorry Turf is Not available !!!
         <span className='listDesc'>Turf Desc: {obj.category.category_name}</span>
         <span className='listcity'>Turf district: {obj.district.district}</span><br/>
         <span className='listcity'>Turf City: {obj.city.city}</span><br/>
-        <span className='listPrice'>Price: {obj.price}</span>
+        <span className='listPrice'>₹  {obj.price}</span>
        </MDBCardText>
        <MDBCardText>
          <small className='text-muted'> <button className='bookbtn' onClick={()=>navigate(`/singleturf/${obj.category.slug}/${obj.slug}/`)}>See Availability</button></small>

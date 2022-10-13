@@ -173,7 +173,7 @@ Sorry Slot is Not available !!!
       <Card.Body>
         <Card.Title>{obj.turf.turf_name}</Card.Title>
         <Card.Text>
-        Price: {obj.turf.price}
+        ₹  {obj.turf.price}
         </Card.Text>
         <Card.Text>
         Date: {obj.Date}

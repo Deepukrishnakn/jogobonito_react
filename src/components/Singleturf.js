@@ -103,6 +103,8 @@ useEffect(() => {
          <MDBCardText>
            <small className='text-muted'>  <h3>{turfdetails.turf_name}</h3></small>
            <h1 className="priceh1"> {turfdetails.size}</h1>
+           <h3 className='singleturftitle'>{turfdetails.district.district}</h3>
+      <span className='singleturftitle' >{turfdetails.city.city}</span><br/><br/>
            <div className="turfdetailsprice">  
      <h2 className="bookbtnp"> <b>₹ {turfdetails.price}</b> For one match</h2>
       </div>

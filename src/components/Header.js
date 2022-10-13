@@ -35,19 +35,24 @@ function Header() {
           <div className='headerContainer'>
             <div className='headerList'>
 
-               <div className='headerlistItem'>
+               <div className='headerlistItem active'>
                <FontAwesomeIcon icon={faFutbol} />
-               <Link to='/Business'><span className='turfbtn'>Business</span></Link>
+               <Link style={{textDecoration:'none',color:'white'}} to='/Business'><span className='turfbtn'>Business</span></Link>
                </div>
           
                <div className='headerlistItem active'>
                <FontAwesomeIcon icon={faFutbol} />
-               <Link to='/'><span className='turfbtn'>Home</span></Link>
+               <Link style={{textDecoration:'none',color:'white'}} to='/'><span className='turfbtn'>Home</span></Link>
                </div>
           
-               <div className='headerlistItem'>
+               <div className='headerlistItem active'>
                <FontAwesomeIcon icon={faFutbol} />
-               <Link to='/turf'><span className='turfbtn'>Turf</span></Link>
+               <Link style={{textDecoration:'none',color:'white'}} to='/turf'><span className='turfbtn'>Turf</span></Link>
+               </div> 
+
+               <div className='headerlistItem active'>
+               <FontAwesomeIcon icon={faFutbol} />
+               <a style={{textDecoration:'none',color:'white'}} href='https://www.bootit.tk/'>Shop Now</a>
                </div>
           </div>
 

@@ -44,7 +44,7 @@ function Newturf() {
         <MDBCardTitle>{obj.turf_name}</MDBCardTitle>
         <MDBCardText style={{backgroundColor:''}}>
     <h5>Size:{obj.size}</h5>
-    <h4 className='newturfTitle'>Rent/h:{obj.price}</h4>
+    <h4 className='newturfTitle'>Rent/h: ₹  {obj.price}</h4>
         </MDBCardText>
         <MDBBtn href='#' className='buttons' onClick={()=>navigate(`/singleturf/${obj.category.slug}/${obj.slug}/`)}>Button</MDBBtn>
       </MDBCardBody>
