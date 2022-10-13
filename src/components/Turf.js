@@ -4,7 +4,6 @@ import './Category.css';
 import Header from './Header'
 import Navebar from './Navebar'
 import { Row,Col } from 'react-bootstrap';
-import List from './List';
 import { useNavigate,Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import '../components/home.css'

@@ -46,7 +46,7 @@ function Newturf() {
     <h5>Size:{obj.size}</h5>
     <h4 className='newturfTitle'>Rent/h: ₹  {obj.price}</h4>
         </MDBCardText>
-        <MDBBtn href='#' className='buttons' onClick={()=>navigate(`/singleturf/${obj.category.slug}/${obj.slug}/`)}>Button</MDBBtn>
+        <MDBBtn href='#' className='buttons' onClick={()=>navigate(`/singleturf/${obj.category.slug}/${obj.slug}/`)}>Go To Play</MDBBtn>
       </MDBCardBody>
     </MDBCard>
 
