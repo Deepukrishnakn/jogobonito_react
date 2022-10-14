@@ -128,16 +128,21 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
         {currentPost.length ==0  ?  <Alert variant='danger' className='m-5'>
 Sorry Turf is Not available !!!
         </Alert>:''}
-            <Col lg={4} sm={12} md={6}>
+        <Col lg={4} sm={12} md={6}>
             <h1 className='title mt-5'>Filter Your Turf</h1>
-            <div className='turfContainer m-5'>
+               <MDBCard className='ms-2' style={{ maxWidth: '1000px' }}>
+ <MDBRow className='g-0'>
+   <MDBCol md='12' lg='4'>
+<MDBCardBody>
+          
+            <div className='turfContainer'>
             <div className='turfWrapper'>
                 <div className='turfstSearch'>
                     <h1 className='turfTitle'>Filters</h1><br/>
 
-          
+                    <MDBCol md='4'>  
         <h1 className='filtertitle'>District</h1>   <br/>   
-       <Box sx={{ minWidth: 120 }}>
+       <Box sx={{ minWidth:'320px' }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Enter district</InputLabel>
         <Select
@@ -147,13 +152,13 @@ Sorry Turf is Not available !!!
           label="Enter district">
           {district.map((obj)=>
           <MenuItem    onClick={()=>filterDistHandler(obj.id)} value={obj.id}>{obj.district}</MenuItem>
-          )}
+          )}data
         </Select>
       </FormControl>
     </Box> <br/>
 
     <h1 className='filtertitle'>City</h1><br/>
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: '320px'}}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Enter city</InputLabel>
         <Select
@@ -169,7 +174,7 @@ Sorry Turf is Not available !!!
     </Box><br/>
 
     <h1 className='filtertitle'>Category</h1>
-    <br/> <Box sx={{ minWidth: 120 }}>
+    <br/> <Box sx={{ minWidth: '320px' }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Enter Category</InputLabel>
         <Select
@@ -183,9 +188,14 @@ Sorry Turf is Not available !!!
         </Select>
       </FormControl>
     </Box><br/>
+    </MDBCol>
                 </div>
             </div>
         </div>
+        </MDBCardBody>
+   </MDBCol>
+ </MDBRow>
+</MDBCard>
             </Col>
             <Col lg={8}>
  {loading && <h4>loading...</h4>}
