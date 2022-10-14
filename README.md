@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Turf booking ecommerce website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a sample application that demonstrates an e-commerce turf booking website using the React.js The application loads turf from a PostgreSQL database and displays them. Users can select to display turf in a single category. Users can register and login to website and, click on any turf to get more information including pricing. Users can select slot and add them to their complete their payment using Razor-pay or cod. They can view their order status.
+In admin side, admins can manage users,Vendor and In Vendor side, vendor can manage turf,sloat and CRUD etc...
+
+## Live Demonstration
+
+The E-commerce demo can be viewed online here: https://jogobonito.tk
 
 ## Available Scripts
 
