@@ -88,12 +88,12 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <tbody>
         <tr>
           <td>{index+1}</td>
-          <td>{obj.slot.user.first_name}</td>
-          <td>{obj.slot.turf.turf_name}</td>
-          <td>{obj.slot.vendor.first_name}</td>
-          <td>{obj.slot.Date}</td>
-          <td>{obj.slot.Time}</td>
-          <td>{obj.slot.turf.price}</td>
+          <td>{obj?.slot?.user?.first_name}</td>
+          <td>{obj?.slot?.turf?.turf_name}</td>
+          <td>{obj.slot?.vendor?.first_name}</td>
+          <td>{obj?.slot?.Date}</td>
+          <td>{obj?.slot?.Time}</td>
+          <td>{obj?.slot?.turf?.price}</td>
           {/* <td>{obj.turf.size}</td>
           <td>{obj.turf.city.city}</td> */}
         {/* <td><Button variant="success" className="bookbtn" onClick={}>EDIT</Button></td>  */}

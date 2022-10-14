@@ -62,10 +62,10 @@ function AllUsers() {
       }
 
 
-      const DeleteVendor = (id,e) =>{
+      const Deleteuser = (id,e) =>{
         axios.delete(`mastar/alluser/${id}`,
         {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
-          handleClose1()
+          handleClose2()
           getUser()
         }).catch(e=>console.log(e))
         .finally(()=>setLoading(false))
@@ -117,7 +117,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
  <Table striped bordered hover className='m-5 me-5'>
       <thead>
         <tr className=''>
-          {/* <th>No.</th> */}
+          <th>No.</th>
           <th>Vendor Name</th>
           <th>Email</th>
           <th>phone</th>
@@ -130,7 +130,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
       <tbody>
         {! obj.is_admin?
         <tr>
-          {/* <td>{index+1}</td> */}
+          <td>{index+1}</td>
           <td>{obj.first_name+' '+ obj.last_name}</td>
           <td>{obj.email}</td>
           <td>{obj.phone_number}</td>
@@ -150,22 +150,22 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           {/* <td><h4 style={{color:'green'}}>{obj.is_Paid}</h4></td> */}
           <td><Button variant="" className=""  onClick={(e) => GetSingleUser(obj.id,e)}>Details</Button></td>
         
-          <td><Button variant="danger" onClick={handleShow1}>
+          <td> <Button variant="danger" onClick={handleShow2}>
           DELETE
       </Button>
 
-      <Modal show={show1} onHide={handleClose1}>
+      <Modal show={show2} onHide={handleClose2}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Delete</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-       <h5 style={{color:'red'}}>Are You sure you want to delete? {obj.first_name+' '+obj.last_name}</h5> 
+       <h5 style={{color:'red'}}>Are You sure you want to delete?</h5> 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose1}>
+          <Button variant="secondary" onClick={handleClose2}>
             Close
           </Button>
-          <Button variant="danger" className="bookbtn"  onClick={(e) => DeleteVendor(obj.id,e)}>DELETE</Button>
+          <Button variant="danger" className="bookbtn"  onClick={(e) => Deleteuser(obj.id,e)}>DELETE</Button>
         </Modal.Footer>
       </Modal>
 </td> 

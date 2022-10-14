@@ -208,7 +208,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-       <h5 style={{color:'red'}}>Are You sure you want to delete? {obj.first_name+' '+obj.last_name}</h5> 
+       <h5 style={{color:'red'}}>Are You sure you want to delete?</h5> 
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose1}>

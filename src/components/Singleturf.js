@@ -106,9 +106,9 @@ useEffect(() => {
            <h3 className='singleturftitle'>{turfdetails.district.district}</h3>
       <span className='singleturftitle' >{turfdetails.city.city}</span><br/><br/>
            <div className="turfdetailsprice">  
-     <h2 className="bookbtnp"> <b>₹ {turfdetails.price}</b> For one match</h2>
+     <h4 className="bookbtn"> <b>₹ {turfdetails.price}</b> For one match</h4>
       </div>
-           <button className="bookbtn me-5" onClick={()=>navigate(`/getslot/${turfdetails.id}`)}>Reserve or Book Now </button>
+           <button className="bookbtnp me-5" onClick={()=>navigate(`/getslot/${turfdetails.id}`)}>Reserve or Book Now </button>
          </MDBCardText>
        </MDBCardBody>
      </MDBCard>

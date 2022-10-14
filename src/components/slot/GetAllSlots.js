@@ -108,7 +108,7 @@ Sorry Slot is Not available !!!
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Delete</Modal.Title>
         </Modal.Header>
         <Modal.Body>
        <h5 style={{color:'red'}}>Are You sure you want to delete?</h5> 
