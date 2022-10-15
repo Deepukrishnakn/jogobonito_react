@@ -24,11 +24,14 @@ function AllUsers() {
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
 
-
+  const [delId,setDel]=useState()
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleClose2 = () => setShow2(false);
-  const handleShow2 = () => setShow2(true);
+  const handleShow2 = (id) => {
+    setDel(id)
+    setShow2(true)
+  }
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,8 +65,8 @@ function AllUsers() {
       }
 
 
-      const Deleteuser = (id,e) =>{
-        axios.delete(`mastar/alluser/${id}`,
+      const Deleteuser = () =>{
+        axios.delete(`mastar/alluser/${delId}/`,
         {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           handleClose2()
           getUser()
@@ -150,7 +153,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           {/* <td><h4 style={{color:'green'}}>{obj.is_Paid}</h4></td> */}
           <td><Button variant="" className=""  onClick={(e) => GetSingleUser(obj.id,e)}>Details</Button></td>
         
-          <td> <Button variant="danger" onClick={handleShow2}>
+          <td> <Button variant="danger" onClick={()=>handleShow2(obj.id)}>
           DELETE
       </Button>
 
@@ -159,7 +162,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
           <Modal.Title>Delete</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-       <h5 style={{color:'red'}}>Are You sure you want to delete?</h5> 
+       <h5 style={{color:'red'}}>Are You sure you want to delete?{obj.first_name}</h5> 
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose2}>

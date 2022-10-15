@@ -10,8 +10,10 @@ function MastarHome() {
   const {adminauthTokens} =useContext(authContext)
   const [loading,setLoading] = useState(false);
     const [cartdata,setachartData] = useState([])
+
     const getchartdata = () =>{
         setLoading(true);
+     
         axios.get('mastar/Orderchart/',{headers:{Authorization:`Bearer ${adminauthTokens}`} }
         ).then(res=>{
           setachartData(res.data)
@@ -19,8 +21,9 @@ function MastarHome() {
         }).catch(e=>console.log(e))
         .finally(()=>setLoading(false))
       }
-
+   
       useEffect(() => {
+     
         getchartdata()
       }, [])
       

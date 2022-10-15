@@ -34,7 +34,11 @@ function AllVendors() {
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
   const handleClose1 = () => setShow1(false);
-  const handleShow1 = () => setShow1(true);
+  const [delId,setDel]=useState()
+  const handleShow1 = (id) => {
+    setDel(id)
+    setShow1(true)
+  }
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
   
@@ -69,8 +73,8 @@ function AllVendors() {
       }
 
 
-      const DeleteVendor = (id,e) =>{
-        axios.delete(`mastar/allvendor/${id}`,
+      const DeleteVendor = () =>{
+        axios.delete(`mastar/allvendor/${delId}`,
         {headers:{Authorization:`Bearer ${adminauthTokens}`}}).then(res=>{
           handleClose1()
           getVendor()

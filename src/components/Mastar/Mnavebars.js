@@ -20,7 +20,7 @@ function Mnavebars() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const navigate = useNavigate()
-
+    const val=  localStorage.getItem('adminauthTokens') 
   return (
     <div>
 
@@ -33,7 +33,7 @@ function Mnavebars() {
             <Nav.Link href="#allvendormanage"  onClick={()=>navigate('/allvendormanage')}>Vendors</Nav.Link>
             <Nav.Link href="#allusers" onClick={()=>navigate('/allusers')}>Users</Nav.Link>
             <NavDropdown title="MY Account" id="collasible-nav-dropdown">
-            {adminauthTokens ?   <NavDropdown.Item href="" lassName='me-5 vnave' onClick={adminLogout}>
+            {val ?   <NavDropdown.Item href="" lassName='me-5 vnave' onClick={adminLogout}>
                 Log out
               </NavDropdown.Item>:<NavDropdown.Item href="" className='vnave'> <Link to='/Login'>Login</Link></NavDropdown.Item>
              }
@@ -41,7 +41,7 @@ function Mnavebars() {
               {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
-              </NavDropdown.Item> */}
+              </NavDropdown.Item> */}             
             </NavDropdown>
           </Nav>
           <Nav>

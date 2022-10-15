@@ -35,6 +35,7 @@ const userLogin= async (email,password)=>{
                 localStorage.setItem('adminauthTokens',JSON.stringify(response.data.token))
                 localStorage.setItem('admin',JSON.stringify(jwt_decode(response.data.token)))
                 navigate('/mhome')
+                
             }else{
                 localStorage.setItem('authTokens',JSON.stringify(response.data.token))
                 localStorage.setItem('user',JSON.stringify(jwt_decode(response.data.token)))

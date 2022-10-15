@@ -34,6 +34,7 @@ function Verify() {
   return (
     <div className='m-5'>
     <Form onSubmit={verifyHandler}>
+      <ToastContainer/>
     {  err &&(<> <h6 style={{color:'red'}}>{err}</h6>  <br/></>) }
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Enter the OTP</Form.Label>
